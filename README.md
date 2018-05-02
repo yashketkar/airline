@@ -1,6 +1,10 @@
 # Airline
 Solution to the [Airline Problem](case_study.xlsx)
 
+# The Solution
+The code for the solution is available [here](solution.py)
+It is compatible wtih Python 2.
+
 # The Problem
 ## Case study
 
