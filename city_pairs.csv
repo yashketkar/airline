@@ -1,9 +1,6 @@
-﻿Airline B  - City Pairs considered,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,Origin City,Desitnation City,"Pass. Demand 
-(per day)",Distance (km),,,,,,,,,,,,,,
-,AA, BB , 420 ," 3,000 ",,,,,,,,,,,,,,
-,BB, CC , 450 ," 6,500 ",,,,,,,,,,,,,,
-,CC, AA , 300 , 400 ,,,,,,,,,,,,,,
-,AA, DD , 300 ," 1,000 ",,,,,,,,,,,,,,
+﻿Airline B  - City Pairs considered
+Origin City, Desitnation City, Passenger Demand (per day), Distance (km)
+AA, BB, 420, 3000
+BB, CC, 450, 6500
+CC, AA, 300, 400
+AA, DD, 300, 1000
