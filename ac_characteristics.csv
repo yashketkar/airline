@@ -1,6 +1,4 @@
-﻿Aircraft Costs
-USD
-"Aircraft Type", "Range (Km)", "Ave. Speed (km/h)", "Number of Seats", "Costs per flight hour"
+﻿"Aircraft Type", "Range (Km)", "Ave. Speed (km/h)", "Number of Seats", "Costs per flight hour"
 A320, 5000, 800, 150, 5000
 A330, 8000, 900, 250, 7500
 B737, 5000, 800, 150, 5100

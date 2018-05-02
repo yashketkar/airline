@@ -1,5 +1,4 @@
-﻿Airline B  - City Pairs considered
-Origin City, Desitnation City, Passenger Demand (per day), Distance (km)
+﻿Origin City, Desitnation City, Passenger Demand (per day), Distance (km)
 AA, BB, 420, 3000
 BB, CC, 450, 6500
 CC, AA, 300, 400
