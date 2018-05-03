@@ -75,7 +75,7 @@ for aircraft_type in characteristics_by_type:
     if lowest_cost > cost_per_seat_per_km:
         lowest_cost = cost_per_seat_per_km
         lowest_cost_type = aircraft_type
-print "The aircraft type with lowest cost per seat per km is: {0} with a cost per seat per km of: {1}.".format(lowest_cost_type, lowest_cost)
+print "\nThe aircraft type with lowest cost per seat per km is:\n{0} with a cost per seat per km of: {1}.".format(lowest_cost_type, lowest_cost)
 
 # Part B
 # Populating the characteristics_by_type dictionary with values from city_pairs.csv
@@ -111,6 +111,6 @@ for city_pair in city_pairs:
             lowest_cost_type_for_city_pair = aircraft_type
     if lowest_cost_type_for_city_pair not in fleet:
         fleet.append(lowest_cost_type_for_city_pair)
-    print "For the city pair: {0} the most suitable aircraft type is: {1} with a total cost incurred: {2}".format(city_pair, lowest_cost_type_for_city_pair, lowest_cost_for_city_pair)
+    print "\nFor the city pair: {0} the most suitable aircraft type is:\n{1} with a total cost incurred: {2}".format(city_pair, lowest_cost_type_for_city_pair, lowest_cost_for_city_pair)
 
 print "\nThe final resultant fleet would consist of: " + ",".join(fleet)
