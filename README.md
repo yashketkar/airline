@@ -1,9 +1,12 @@
 # Airline Problem
+
 The original problem can be viewed [here](case_study.xlsx)
 
 # The Solution
-The Solution with results in the form of an IPython Notebook can be viewed [here](solution.ipynb)
-The Python 2 code for the solution is available [here](solution.py)
+
+The Solution with results in the form of an IPython Notebook can be viewed [here](solution.ipynb).
+
+The Python 2 code for the solution is available [here](solution.py).
 
 # The Problem
 ## Case study
