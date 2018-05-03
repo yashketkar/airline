@@ -68,7 +68,6 @@ for aircraft_type in characteristics_by_type:
         lowest_cost_type = aircraft_type
 print "The aircraft type with lowest cost per seat per km is: {0} with a cost per seat per km of: {1}.".format(lowest_cost_type, lowest_cost)
 
-
 # Part B
 # Populating the characteristics_by_type dictionary with values from city_pairs.csv
 print "\nPart B"
@@ -105,4 +104,4 @@ for city_pair in city_pairs:
         fleet.append(lowest_cost_type_for_city_pair)
     print "For the city pair: {0} the most suitable aircraft type is: {1} with a total cost incurred: {2}".format(city_pair, lowest_cost_type_for_city_pair, lowest_cost_for_city_pair)
 
-print "The resultant fleet would consist of: " + ",".join(fleet)
+print "\nThe final resultant fleet would consist of: " + ",".join(fleet)
