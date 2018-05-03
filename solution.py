@@ -38,6 +38,8 @@ with open('operations.csv', 'r') as f:
     for row in reader:
         if hours_by_type is None:
             hours_by_type = {}
+        elif row[1] in hours_by_type:
+            hours_by_type[row[1]]+=sum(int(i) for i in row[2:])
         else:
             hours_by_type[row[1]]=sum(int(i) for i in row[2:])
 
