@@ -1,5 +1,6 @@
 import sys
 import csv
+import math
 
 # Part A
 # Question 1
@@ -66,3 +67,42 @@ for aircraft_type in characteristics_by_type:
         lowest_cost = cost_per_seat_per_km
         lowest_cost_type = aircraft_type
 print "The aircraft type with lowest cost per seat per km is: {0} with a cost per seat per km of: {1}.".format(lowest_cost_type, lowest_cost)
+
+
+# Part B
+# Populating the characteristics_by_type dictionary with values from city_pairs.csv
+print "\nPart B"
+city_pairs = None
+with open('city_pairs.csv', 'r') as f:
+    reader = csv.reader(f)
+    for row in reader:
+        if city_pairs is None:
+            city_pairs = {}
+        else:
+            city_pairs[row[0] + "," + row[1]]=[int(row[2]), int(row[3])]
+
+fleet = []
+for city_pair in city_pairs:
+    # We need to get the aircrafts which have range higher than or equal to the distance between the city pair
+    range_aircrafts = [aircraft_type for aircraft_type in characteristics_by_type if characteristics_by_type[aircraft_type][0] >= city_pairs[city_pair][1]]
+    # Thus we have eliminated all aircrafts with a lower range
+    lowest_cost_for_city_pair = sys.maxint
+    lowest_cost_type_for_city_pair = None
+    for aircraft_type in range_aircrafts:
+        # Number of trips = Passenger Demand / Number of Seats
+        number_of_trips = math.ceil(1.0*city_pairs[city_pair][0]/characteristics_by_type[aircraft_type][2])
+        # To get cost per trip, we take the distance between the cities
+        # and divide it by the average speed to get the time taken for the trip (in hours)
+        # we then multiply it by cost per hour for the aircraft type,
+        # This will give us the cost for the trip.
+        # i.e. Cost = (Distance/Speed) x Cost per hour = (Time) x Cost per hour
+        cost_for_trip = (1.0*city_pairs[city_pair][1]/characteristics_by_type[aircraft_type][1])*characteristics_by_type[aircraft_type][3]
+        total_cost_incurred = number_of_trips*cost_for_trip
+        if total_cost_incurred < lowest_cost_for_city_pair:
+            lowest_cost_for_city_pair = total_cost_incurred
+            lowest_cost_type_for_city_pair = aircraft_type
+    if lowest_cost_type_for_city_pair not in fleet:
+        fleet.append(lowest_cost_type_for_city_pair)
+    print "For the city pair: {0} the most suitable aircraft type is: {1} with a total cost incurred: {2}".format(city_pair, lowest_cost_type_for_city_pair, lowest_cost_for_city_pair)
+
+print "The resultant fleet would consist of: " + ",".join(fleet)
